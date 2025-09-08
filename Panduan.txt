@@ -1,0 +1,74 @@
+ *═══════════════════════════════════════════════════════
+ *  ⌬  YT NeoShiroko Labs
+ *═══════════════════════════════════════════════════════
+ *  🌐  Website     : https://www.neolabsofficial.my.id
+ *  ⌨︎  Developer   : https://zass.cloud
+ *  ▶︎  YouTube     : https://www.youtube.com/@zassci_desu
+ *  ⚙︎  Panel Murah : pteroku-desu.zass.cloud
+ *
+ *  ⚠︎  Mohon untuk tidak menghapus watermark ini
+ *═══════════════════ © 2025 Zass Desuta ─════════════════════
+
+📖 PANDUAN PENGGUNAAN
+
+Semua pengaturan inti website ini tersimpan di file `config.js` (folder js).
+Kamu bisa ubah nama toko, banner, produk, kontak, hingga metode pembayaran sesuai brand kamu.
+
+⚠️ Ingat! Format JSON harus tetap sama. Jangan hapus tanda kutip (" ") dan koma ( , ) yang ada, cukup ubah isinya saja.
+
+* Bagian-Bagian config.js:
+
+1. **Identitas Toko**
+   - `nama` → Nama toko kamu.
+   - `profil` → URL gambar profil (misalnya logo atau foto).
+   - `banner` → URL banner/header toko.
+   - `tentang` → Deskripsi toko, bisa multi-baris pakai `\n\n`.
+   - `alamat` → Alamat lengkap (opsional, bisa diganti online shop address).
+
+2. **Sosial Media**
+   - `email` → Email resmi toko.
+   - `youtube` → Username channel YouTube.
+   - `tiktok` → Username akun TikTok.
+   - `whatsapp` → Nomor WhatsApp (format 62 tanpa +).
+   - `telegram` → Username Telegram.
+
+3. **Metode Pembayaran**
+   - `dana` → Nomor akun Dana.
+   - `gopay` → Nomor akun Gopay.
+   - `ovo` → Nomor akun Ovo.
+   - `qris` → URL gambar QRIS (upload dulu ke catbox atau hosting gambar).
+
+4. **Integrasi Telegram (Notifikasi Pesan)**
+   - `bot` → Token bot dari BotFather.
+   - `chatid` → Chat ID/Group ID tujuan notifikasi.
+
+* Produk (productsData)
+
+- Semua produk diatur di bagian `productsData`.
+- Format produk sudah dipisah per kategori, contoh:
+  - Hosting
+  - Desain
+  - Produk Digital
+
+* Struktur produk:
+
+{ "id": 1, "name": "Nama Produk", "icon": "fas fa-server", // Ikon FontAwesome "description": "Deskripsi produk", "variants": [ { "name": "Paket A", "price": 10000 }, { "name": "Paket B", "price": 20000 } ] }
+
+- `id` → Nomor unik (jangan ada yang sama).
+- `name` → Nama produk.
+- `icon` → Ikon (gunakan class FontAwesome).
+- `description` → Penjelasan produk.
+- `variants` → List pilihan paket & harga.
+
+* Tips:
+- Mau tambah/kurangin produk? → Boleh, asal format sama.
+- Mau tambah/kurangin payment? → Bisa, tapi mungkin perlu edit `keranjang.html` agar UI menyesuaikan.
+- Semua harga dalam angka (tanpa Rp, langsung angka aja).  
+- Kalau mau harga fleksibel → bisa tulis `"Harga sesuai request"`.
+
+* Intinya:
+- Edit `config.js` → otomatis data di web ikut berubah.
+- Jaga format JSON supaya tidak error.
+- Simpan semua gambar (logo/banner/qris) di hosting gambar seperti [catbox.moe](https://catbox.moe) biar URL stabil.
+
+Selamat ngoprek, semoga jualan makin lancar dan jangan lupa like, komen dan subrek.
